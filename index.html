@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo" onclick="smoothScroll('#home'); return false;">Portfolio</a>
+            <ul class="nav-menu">
+                <li><a href="#home" onclick="smoothScroll('#home'); return false;">Home</a></li>
+                <li><a href="#about" onclick="smoothScroll('#about'); return false;">About</a></li>
+                <li><a href="#skills" onclick="smoothScroll('#skills'); return false;">Skills</a></li>
+                <li><a href="#projects" onclick="smoothScroll('#projects'); return false;">Projects</a></li>
+                <li><a href="#contact" onclick="smoothScroll('#contact'); return false;">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">NANDHINI G</span></h1>
+                <h2>Web Developer & Designer</h2>
+                <p>I create responsive, modern web applications with clean code and intuitive design.Specializing in modern JavaScript, React, and scalable cloud solutions.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary" onclick="smoothScroll('#projects'); return false;">View My Work</a>
+                    <a href="#contact" class="btn secondary" onclick="smoothScroll('#contact'); return false;">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-img" onclick="openImage('profile')">
+                    <img src="web development.jpg" alt="Profile">
+                    <div class="img-overlay">Click to enlarge</div>
+                </div>
+                <div class="about-text">
+                    <h3>Who am I?</h3>
+                    <p>I’m a passionate Computer Science student, building web applications and digital solutions. I specialize in creating responsive websites and user-friendly designs using modern web technologies and best practices.</p>
+                    <p>My expertise spans across the entire development stack, from crafting responsive front-end interfaces with React to building robust back-end APIs with Node.js and Express.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card" onclick="showSkillDetails('HTML5')">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 90%">90%</div>
+                    </div>
+                </div>
+                <div class="skill-card" onclick="showSkillDetails('CSS3')">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 85%">85%</div>
+                    </div>
+                </div>
+                <div class="skill-card" onclick="showSkillDetails('JavaScript')">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%">80%</div>
+                    </div>
+                </div>
+                <div class="skill-card" onclick="showSkillDetails('Python')">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 75%">75%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" onclick="openProject('project1')">
+                    <img src="web design and development.png" alt="Project 1">
+                    <div class="project-info">
+                        <h3>Web development & design</h3>
+                        <p>Web development & design: Creating modern, responsive, and interactive websites using latest technologies like React.</p>
+                        <div class="project-links" onclick="event.stopPropagation()">
+                            <a href="#" onclick="openGitHub('project1'); return false;"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" onclick="openDemo('project1'); return false;"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" onclick="openProject('project2')">
+                    <img src="life image.jpg" alt="Project 2">
+                    <div class="project-info">
+                        <h3>Leaf Disease</h3>
+                        <p>Developed an AI-powered leaf disease and pest detection system using Convolutional Neural Networks (CNNs), achieving high accuracy through image preprocessing, feature extraction, and classification, enabling real-time diagnostic feedback for sustainable precision farming.</p>
+                        <div class="project-links" onclick="event.stopPropagation()">
+                            <a href="#" onclick="openGitHub('project2'); return false;"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" onclick="openDemo('project2'); return false;"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" onclick="openProject('project3')">
+                    <img src="sleep.jpg" alt="Project 3">
+                    <div class="project-info">
+                        <h3>Sleep Quality Predictor</h3>
+                        <p>A machine learning application that analyzes user data such as daily activity, stress levels, screen time, and sleep patterns to predict sleep quality scores. It provides personalized insights to help users improve their sleep hygiene and overall well-being.</p>
+                        <div class="project-links" onclick="event.stopPropagation()">
+                            <a href="#" onclick="openGitHub('project3'); return false;"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" onclick="openDemo('project3'); return false;"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" onclick="openProject('project4')">
+                    <img src="spam.jpg" alt="Project 2">
+                    <div class="project-info">
+                        <h3>Email Spam Classifier</h3>
+                        <p>A machine learning system that analyzes user lifestyle factors (such as physical activity, screen time, stress levels, and daily routines) to predict the quality of sleep. The goal is to provide insights and recommendations to help users develop healthier sleep habits.</p>
+                        <div class="project-links" onclick="event.stopPropagation()">
+                            <a href="#" onclick="openGitHub('project4'); return false;"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" onclick="openDemo('project4'); return false;"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" onclick="openProject('project2')">
+                    <img src="Product Sentiment.jpg" alt="Project 2">
+                    <div class="project-info">
+                        <h3>Product Sentiment Analyzer and Review Dashboard</h3>
+                        <p>A web-based application that automatically collects product reviews from e-commerce platforms like Amazon and Flipkart using web scraping, analyzes customer opinions through Natural Language Processing (NLP), and presents interactive visual insights on a user-friendly dashboard.</p>
+                        <div class="project-links" onclick="event.stopPropagation()">
+                            <a href="#" onclick="openGitHub('project2'); return false;"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" onclick="openDemo('project2'); return false;"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology and development.</p>
+                    <div class="contact-item" onclick="window.location.href='mailto:your.email@example.com'">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>govindarajnandhini17@gmail.com</p>
+                    </div>
+                    <div class="contact-item" onclick="window.location.href='tel:+1234567890'">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p>+91 7200672346</p>
+                    </div>
+                    <div class="contact-item" onclick="openMap()">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>Trichy, Tamil Nadu</p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+                    <input type="text" placeholder="Your Name" id="name" required>
+                    <input type="email" placeholder="Your Email" id="email" required>
+                    <input type="text" placeholder="Subject" id="subject">
+                    <textarea rows="5" placeholder="Your Message" id="message" required></textarea>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#" onclick="openSocial('github'); return false;"><i class="fab fa-github"></i></a>
+                <a href="#" onclick="openSocial('linkedin'); return false;"><i class="fab fa-linkedin"></i></a>
+                <a href="#" onclick="openSocial('twitter'); return false;"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2026 Nandhini G. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
