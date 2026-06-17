@@ -1,2 +1,1 @@
-# LEAF-DISEASES-AND-PEST-DETECTION-USING-CONVOLUTIONAL-NEURAL-NETWORK-CNN-
-Leaf Disease and Pest Detection using CNN
+# plant-leaf-disease-detection
